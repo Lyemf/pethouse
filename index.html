@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PetHouse — ваш любимый зоомагазин. Корма, игрушки и аксессуары для кошек, собак и других питомцев с доставкой за 2 часа.">
+    <meta name="keywords" content="зоомагазин, корм для кошек, корм для собак, игрушки для животных, аксессуары для питомцев, PetHouse, купить корм, доставка зоотоваров">
+    <meta name="author" content="PetHouse">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="PetHouse — Всё для ваших питомцев">
+    <meta property="og:description" content="Широкий ассортимент товаров для животных. Доставка по всему городу за 2 часа.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=1200&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PetHouse — Всё для ваших питомцев">
+    <meta name="twitter:description" content="Широкий ассортимент товаров для животных с доставкой на дом">
+    <link rel="canonical" href="https://pethouse.ru/">
+    <title>PetHouse — Всё для ваших питомцев</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===================== НАВИГАЦИЯ ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-brand">
+                <span class="brand-paw">🐾</span>
+                <span class="brand-name">PetHouse</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home"     class="nav-link" data-section="home">Главная</a></li>
+                <li><a href="#catalog"  class="nav-link" data-section="catalog">Каталог</a></li>
+                <li><a href="#about"    class="nav-link" data-section="about">О нас</a></li>
+                <li><a href="#contacts" class="nav-link" data-section="contacts">Контакты</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Переключатель темы -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Переключить тему">
+                    <span class="theme-icon" id="themeIcon">🌙</span>
+                    <div class="theme-track">
+                        <div class="theme-thumb"></div>
+                    </div>
+                </button>
+                <!-- Бургер-меню (мобильное) -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Оверлей мобильного меню -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ===================== HERO СЕКЦИЯ ===================== -->
+    <section class="hero" id="home">
+        <!-- Декоративные фоновые круги -->
+        <div class="hero-bg-decor">
+            <div class="decor-circle decor-circle--1"></div>
+            <div class="decor-circle decor-circle--2"></div>
+            <div class="decor-circle decor-circle--3"></div>
+            <div class="decor-blob"></div>
+        </div>
+
+        <div class="container hero-container">
+            <!-- Левая часть Hero -->
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-down">
+                    <span class="hero-badge-dot"></span>
+                    <span>Лучший зоомагазин 2025 года</span>
+                </div>
+
+                <h1 class="hero-title animate-fade-up">
+                    Всё лучшее<br>
+                    <span class="hero-title-gradient">для ваших</span><br>
+                    любимцев
+                </h1>
+
+                <p class="hero-subtitle animate-fade-up" style="animation-delay: 0.15s;">
+                    Широкий выбор кормов, игрушек и аксессуаров для ваших питомцев.
+                    Только сертифицированные товары от проверенных брендов.
+                </p>
+
+                <div class="hero-cta animate-fade-up" style="animation-delay: 0.25s;">
+                    <a href="#catalog" class="btn btn--primary btn--lg">
+                        Перейти в каталог
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#about" class="btn btn--ghost btn--lg">
+                        Узнать о нас
+                    </a>
+                </div>
+
+                <!-- Статистика -->
+                <div class="hero-stats animate-fade-up" style="animation-delay: 0.35s;">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5000">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Товаров</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-plus">K+</span>
+                        <span class="stat-label">Клиентов</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-plus"> лет</span>
+                        <span class="stat-label">На рынке</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая часть Hero — изображение -->
+            <div class="hero-visual animate-fade-left">
+                <div class="hero-img-wrapper">
+                    <img
+                        src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=640&q=80&fit=crop"
+                        alt="Счастливый питомец в PetHouse"
+                        class="hero-img"
+                        loading="eager"
+                    >
+                    <!-- Плавающие карточки -->
+                    <div class="float-card float-card--top">
+                        <span class="float-card-icon">🚀</span>
+                        <div class="float-card-text">
+                            <strong>Быстрая доставка</strong>
+                            <span>За 2 часа</span>
+                        </div>
+                    </div>
+                    <div class="float-card float-card--bottom">
+                        <span class="float-card-icon">⭐</span>
+                        <div class="float-card-text">
+                            <strong>Рейтинг 4.9</strong>
+                            <span>1 200 отзывов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Волна-разделитель -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-secondary)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===================== КАТАЛОГ ===================== -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Наши товары</span>
+                <h2 class="section-title">Каталог товаров</h2>
+                <p class="section-subtitle">
+                    Выберите категорию и найдите всё необходимое для вашего питомца
+                </p>
+            </div>
+
+            <!-- Фильтры категорий -->
+            <div class="catalog-filters animate-on-scroll">
+                <button class="filter-btn active" data-category="all">
+                    <span>Все товары</span>
+                </button>
+                <button class="filter-btn" data-category="food">
+                    <span class="filter-icon">🍖</span>
+                    <span>Корма</span>
+                </button>
+                <button class="filter-btn" data-category="toys">
+                    <span class="filter-icon">🎾</span>
+                    <span>Игрушки</span>
+                </button>
+                <button class="filter-btn" data-category="accessories">
+                    <span class="filter-icon">🎒</span>
+                    <span>Аксессуары</span>
+                </button>
+                <button class="filter-btn" data-category="cats">
+                    <span class="filter-icon">🐱</span>
+                    <span>Для кошек</span>
+                </button>
+                <button class="filter-btn" data-category="dogs">
+                    <span class="filter-icon">🐶</span>
+                    <span>Для собак</span>
+                </button>
+            </div>
+
+            <!-- Сетка товаров (заполняется через JS) -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Контент рендерится JavaScript -->
+            </div>
+
+            <!-- Кнопка "Показать ещё" -->
+            <div class="catalog-more animate-on-scroll">
+                <button class="btn btn--outline btn--lg" id="loadMoreBtn">
+                    Показать ещё товары
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== О КОМПАНИИ ===================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">О нас</span>
+                <h2 class="section-title">О компании PetHouse</h2>
+                <p class="section-subtitle">
+                    Мы заботимся о ваших питомцах с 2017 года
+                </p>
+            </div>
+
+            <!-- Главный блок "О нас" -->
+            <div class="about-layout">
+                <div class="about-visual animate-on-scroll">
+                    <div class="about-img-wrapper">
+                        <img
+                            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80&fit=crop"
+                            alt="Команда PetHouse заботится о животных"
+                            class="about-img"
+                            loading="lazy"
+                        >
+                        <div class="about-exp-badge">
+                            <span class="exp-number">8+</span>
+                            <span class="exp-label">лет опыта</span>
+                        </div>
+                        <div class="about-satisfied-badge">
+                            <div class="satisfied-avatars">
+                                <img src="https://i.pravatar.cc/32?img=1" alt="клиент">
+                                <img src="https://i.pravatar.cc/32?img=2" alt="клиент">
+                                <img src="https://i.pravatar.cc/32?img=3" alt="клиент">
+                            </div>
+                            <div>
+                                <strong>15 000+</strong>
+                                <span>довольных клиентов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content animate-on-scroll">
+                    <h3 class="about-heading">
+                        Создаём счастье<br>для ваших любимцев
+                    </h3>
+                    <p class="about-text">
+                        PetHouse — это не просто магазин, это место, где каждый питомец
+                        найдёт всё необходимое для здоровой и счастливой жизни. Мы тщательно
+                        отбираем каждый товар, сотрудничаем только с проверенными
+                        производителями и ставим здоровье животных на первое место.
+                    </p>
+                    <p class="about-text">
+                        Наша команда состоит из ветеринарных специалистов и зоологов,
+                        которые помогут подобрать идеальный рацион и аксессуары с учётом
+                        породы, возраста и особенностей здоровья вашего питомца.
+                    </p>
+                    <ul class="about-checklist">
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Сертифицированные товары от проверенных мировых брендов</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Бесплатная консультация ветеринара при выборе корма</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Программа лояльности: скидки до 20% для постоянных клиентов</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Доставка по всему городу в день заказа, 7 дней в неделю</span>
+                        </li>
+                        <li>
+                            <span class="check-icon">✓</span>
+                            <span>Возврат товара в течение 14 дней без объяснения причин</span>
+                        </li>
+                    </ul>
+                    <a href="#contacts" class="btn btn--primary">
+                        Связаться с нами
+                    </a>
+                </div>
+            </div>
+
+            <!-- Блок преимуществ -->
+            <div class="advantages-grid">
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon-wrap">
+                        <span class="advantage-icon">🚀</span>
+                    </div>
+                    <h4 class="advantage-title">Быстрая доставка</h4>
+                    <p class="advantage-text">
+                        Доставляем заказы за 2 часа в пределах города.
+                        Работаем 7 дней в неделю без выходных и праздников.
+                    </p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon-wrap">
+                        <span class="advantage-icon">🏆</span>
+                    </div>
+                    <h4 class="advantage-title">Гарантия качества</h4>
+                    <p class="advantage-text">
+                        Все товары прошли ветеринарную проверку и сертификацию.
+                        Возврат в течение 14 дней без дополнительных вопросов.
+                    </p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon-wrap">
+                        <span class="advantage-icon">💰</span>
+                    </div>
+                    <h4 class="advantage-title">Лучшие цены</h4>
+                    <p class="advantage-text">
+                        Работаем напрямую с производителями, поэтому предлагаем
+                        максимально выгодные цены без переплат посредникам.
+                    </p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon-wrap">
+                        <span class="advantage-icon">👨‍⚕️</span>
+                    </div>
+                    <h4 class="advantage-title">Экспертный совет</h4>
+                    <p class="advantage-text">
+                        Наши специалисты помогут подобрать питание и аксессуары
+                        с учётом индивидуальных особенностей вашего питомца.
+                    </p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon-wrap">
+                        <span class="advantage-icon">🛡️</span>
+                    </div>
+                    <h4 class="advantage-title">Безопасные товары</h4>
+                    <p class="advantage-text">
+                        Только проверенные, гипоаллергенные материалы.
+                        Никаких вредных добавок и красителей в составе.
+                    </p>
+                </div>
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-icon-wrap">
+                        <span class="advantage-icon">❤️</span>
+                    </div>
+                    <h4 class="advantage-title">Помогаем приютам</h4>
+                    <p class="advantage-text">
+                        5% выручки ежемесячно перечисляем в приюты для животных.
+                        Вместе помогаем бездомным питомцам найти дом.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== КОНТАКТЫ ===================== -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Связь с нами</span>
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-subtitle">
+                    Мы всегда рады помочь вам и вашему питомцу
+                </p>
+            </div>
+
+            <div class="contacts-layout">
+                <!-- Карточки контактной информации -->
+                <div class="contact-info-list">
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-info-icon">📍</div>
+                        <div class="contact-info-body">
+                            <h4>Наш адрес</h4>
+                            <p>ул. Пушкина, д. 15<br>Москва, 101000, Россия</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-info-icon">📞</div>
+                        <div class="contact-info-body">
+                            <h4>Телефон</h4>
+                            <p>
+                                <a href="tel:+74951234567">+7 (495) 123-45-67</a><br>
+                                <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-info-icon">📧</div>
+                        <div class="contact-info-body">
+                            <h4>Email</h4>
+                            <p>
+                                <a href="mailto:info@pethouse.ru">info@pethouse.ru</a><br>
+                                <a href="mailto:support@pethouse.ru">support@pethouse.ru</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-info-icon">🕐</div>
+                        <div class="contact-info-body">
+                            <h4>График работы</h4>
+                            <p>Пн–Пт: 9:00 – 21:00<br>Сб–Вс: 10:00 – 20:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card animate-on-scroll">
+                        <div class="contact-info-icon">📱</div>
+                        <div class="contact-info-body">
+                            <h4>Мы в соцсетях</h4>
+                            <div class="social-links-row">
+                                <a href="#" class="social-chip">VK</a>
+                                <a href="#" class="social-chip">TG</a>
+                                <a href="#" class="social-chip">OK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="contact-form-box animate-on-scroll">
+                    <h3 class="form-title">Напишите нам</h3>
+                    <p class="form-subtitle">Ответим в течение 30 минут в рабочее время</p>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <!-- Имя -->
+                        <div class="form-group" id="nameGroup">
+                            <label class="form-label" for="inputName">Ваше имя *</label>
+                            <div class="form-input-wrapper">
+                                <span class="form-input-icon">👤</span>
+                                <input
+                                    type="text"
+                                    id="inputName"
+                                    name="name"
+                                    class="form-input"
+                                    placeholder="Иван Иванов"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+                            <span class="form-error-msg" id="nameError"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group" id="emailGroup">
+                            <label class="form-label" for="inputEmail">Email адрес *</label>
+                            <div class="form-input-wrapper">
+                                <span class="form-input-icon">✉️</span>
+                                <input
+                                    type="email"
+                                    id="inputEmail"
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="ivan@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+                            <span class="form-error-msg" id="emailError"></span>
+                        </div>
+
+                        <!-- Тема -->
+                        <div class="form-group">
+                            <label class="form-label" for="inputSubject">Тема обращения</label>
+                            <div class="form-input-wrapper">
+                                <span class="form-input-icon">📋</span>
+                                <select id="inputSubject" name="subject" class="form-input form-select">
+                                    <option value="">Выберите тему</option>
+                                    <option value="order">Вопрос о заказе</option>
+                                    <option value="delivery">Доставка</option>
+                                    <option value="product">Вопрос о товаре</option>
+                                    <option value="return">Возврат товара</option>
+                                    <option value="partnership">Сотрудничество</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Сообщение -->
+                        <div class="form-group" id="messageGroup">
+                            <label class="form-label" for="inputMessage">Сообщение *</label>
+                            <div class="form-input-wrapper form-input-wrapper--textarea">
+                                <span class="form-input-icon form-input-icon--top">💬</span>
+                                <textarea
+                                    id="inputMessage"
+                                    name="message"
+                                    class="form-input form-textarea"
+                                    placeholder="Напишите ваш вопрос или пожелание..."
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+                            <span class="form-error-msg" id="messageError"></span>
+                            <span class="char-counter" id="charCounter">0 / 1000</span>
+                        </div>
+
+                        <!-- Согласие -->
+                        <div class="form-group form-group--checkbox">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="inputAgree" name="agree" class="checkbox-input" required>
+                                <span class="checkbox-custom"></span>
+                                <span>Я согласен с <a href="#" class="form-link">политикой конфиденциальности</a></span>
+                            </label>
+                            <span class="form-error-msg" id="agreeError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                            <span class="btn-text">Отправить сообщение</span>
+                            <span class="btn-loader" id="btnLoader" style="display:none;">⏳</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ПОДВАЛ ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-brand">
+                        <span class="brand-paw">🐾</span>
+                        <span class="brand-name">PetHouse</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Всё лучшее для ваших любимцев — с заботой и любовью
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" aria-label="ВКонтакте">
+                            <span>VK</span>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Telegram">
+                            <span>TG</span>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Одноклассники">
+                            <span>OK</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Навигация</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Категории</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#catalog">Корма</a></li>
+                        <li><a href="#catalog">Игрушки</a></li>
+                        <li><a href="#catalog">Аксессуары</a></li>
+                        <li><a href="#catalog">Для кошек</a></li>
+                        <li><a href="#catalog">Для собак</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Информация</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия и возврат</a></li>
+                        <li><a href="#">Программа лояльности</a></li>
+                        <li><a href="#">Публичная оферта</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2025 PetHouse. Все права защищены.</p>
+                <p class="footer-dev">Разработано как дипломный проект</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== КНОПКА "НАВЕРХ" ===================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Вернуться наверх" title="Наверх">
+        ↑
+    </button>
+
+    <!-- ===================== ЧАТ-БОТ ===================== -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Кнопка открытия чата -->
+        <button class="chat-fab" id="chatFab" aria-label="Открыть чат с консультантом">
+            <span class="chat-fab-icon chat-fab-icon--open">💬</span>
+            <span class="chat-fab-icon chat-fab-icon--close" style="display:none;">✕</span>
+            <span class="chat-fab-pulse"></span>
+        </button>
+        <!-- Бейдж с непрочитанным сообщением -->
+        <div class="chat-badge" id="chatBadge">1</div>
+
+        <!-- Окно чата -->
+        <div class="chat-window" id="chatWindow" aria-label="Окно чата">
+            <!-- Заголовок чата -->
+            <div class="chat-header">
+                <div class="chat-bot-avatar-wrap">
+                    <span class="chat-bot-avatar">🐾</span>
+                    <span class="chat-bot-online-dot"></span>
+                </div>
+                <div class="chat-bot-meta">
+                    <strong class="chat-bot-name">PetBot</strong>
+                    <span class="chat-bot-status">AI-консультант • Онлайн</span>
+                </div>
+                <button class="chat-close-btn" id="chatCloseBtn" aria-label="Закрыть чат">✕</button>
+            </div>
+
+            <!-- Сообщения -->
+            <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+                <!-- Сообщения добавляются через JS -->
+            </div>
+
+            <!-- Быстрые ответы -->
+            <div class="chat-quick-replies" id="chatQuickReplies">
+                <button class="quick-reply-btn" data-msg="Как осуществляется доставка?">🚀 Доставка</button>
+                <button class="quick-reply-btn" data-msg="Какие способы оплаты принимаете?">💳 Оплата</button>
+                <button class="quick-reply-btn" data-msg="Помогите подобрать корм для кошки">🍖 Подбор корма</button>
+                <button class="quick-reply-btn" data-msg="Каков ваш график работы?">🕐 Часы работы</button>
+            </div>
+
+            <!-- Поле ввода -->
+            <div class="chat-input-row">
+                <input
+                    type="text"
+                    class="chat-input"
+                    id="chatInput"
+                    placeholder="Напишите вопрос..."
+                    aria-label="Поле ввода сообщения"
+                    maxlength="300"
+                    autocomplete="off"
+                >
+                <button class="chat-send-btn" id="chatSendBtn" aria-label="Отправить сообщение">
+                    →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== ТОСТ-УВЕДОМЛЕНИЕ ===================== -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive">
+        <span class="toast-icon" id="toastIcon">✓</span>
+        <div class="toast-body">
+            <strong class="toast-title" id="toastTitle"></strong>
+            <span class="toast-text" id="toastText"></span>
+        </div>
+    </div>
+
+    <!-- ===================== МОДАЛЬНОЕ ОКНО ТОВАРА ===================== -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Информация о товаре">
+        <div class="modal" id="productModal">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Закрыть">✕</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Контент вставляется через JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
